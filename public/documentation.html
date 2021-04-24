@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+    
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,13 +13,135 @@
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
 
-    </head>
+</head>
 
 
-    <body>
-        This web application will provide users with access to information about different movies, 
-        directors, and genres. Users will be able to sign up, update their personal information, 
-        and create a list of their favorite movies.        
+<body>
+    <header>
+        <h1>
+            Movie API
+        </h1>
+        <h2>
+            Goal: 
+        </h2>
+        <p>
+            This web application will provide users with access to information about different movies, 
+            directors, and genres. Users will be able to sign up, update their personal information, 
+            and create a list of their favorite movies.    
+        </p>
+    </header>
 
-    </body>
+    <main>
+        <div>
+            <h2>
+                Stack / Dependencies
+            </h2>
+
+            <p>
+                Frontend: HTML, CSS, bootstrap
+                <br>
+                Backend: Node.js, Body-Parser, Express, Morgan
+            </p>
+            <br>
+        </div>
+
+    <table class="table table-hover table-bordered">
+        <h1 class="head-table"> Documentaion - Endpoint</h1>
+        <thead>
+            <tr>
+                <th scope="col">Description</th>
+                <th scope="col">URL</th>
+                <th scope="col">URL Parameters</th>
+                <th scope="col">Request data format</th>
+                <th scope="col">Response data format</th>
+                <th scope="col">Method</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td scope="row">Return the documentation html</td>
+                <td>/documentation.html</td>
+                <td>none</td>
+                <td>none</td>
+                <td>A response that contains the documentation html</td>
+                <td>GET</td>
+            </tr>
+            <tr>
+                <td scope="row">Return a movie list</td>
+                <td>/movies</td>
+                <td>none</td>
+                <td>none</td>
+                <td>JSON object holding movie data</td>
+                <td>GET</td>
+            </tr>
+            <tr>
+                <td scope="row">Return title data</td>
+                <td>/movies/:title</td>
+                <td>title</td>
+                <td>none</td>
+                <td>JSON object holding title data</td>  
+                <td>GET</td>   
+            </tr>
+            <tr>
+                <td scope="row">Return genre data</td>
+                <td>/movies/:genre</td>
+                <td>genre</td>
+                <td>none</td>
+                <td>action</td>
+                <td>GET</td>
+           </tr>
+           <tr>
+                <td scope="row">Return director data</td>
+                <td>/movies/director/</td>
+                <td>director</td>
+                <td>none</td>
+                <td>Jon Favreau</td>
+                <td>GET</td>
+            </tr>
+            <tr>
+                <td scope="row">Add movie</td>
+                <td>/movies</td>
+                <td>none</td>
+                <td>JSON object holding data about the movies to add, with this structure: <p> { <br> title: "Avengers", <br> genres: <br> director: , } </p> </td> 
+                <td>JSON object holding data about the movie that was added, with this structure: <p> { <br> title: "Avengers", <br> genres: <br> director: , } </p> </td> 
+                <td>POST</td>
+            </tr>
+            <tr>
+                <td scope="row">Remove movie by title</td>
+                <td>/movies/:title</td>                 
+                <td>title</td>
+                <td>none</td>
+                <td>A text message indicating either the success/failure of removal</td>
+                <td>DELETE</td>
+            </tr>
+            <tr>
+                <td scope="row">Allow new users to register</td>
+                <td>/users</td>
+                <td>none</td>
+                <td>JSON object holding data about the users, registered as <p>{ <br> Username: string <br> Password: string <br> Email: String <br> } </p></td>
+                <td>Response that the account has been created</td>
+                <td>POST</td>
+            </tr>
+            <tr>
+                <td scope="row">Allow users to update thier info such as their username or email address</td>
+                <td>/user/:Username</td>
+                <td>Username</td>                
+                <td>JSON object holding data about the users, registered as <p>{ <br> Username: string <br> Password: string <br> Email: String <br> } </p></td>
+                <td>A response that contains updated data</td>
+                <td>PUT</td>
+            </tr>
+        </tbody>
+
+
+
+    </table>
+
+
+    </main>
+    <footer>
+
+    </footer>
+<script src="server.js"></script>  
+</body>
 </html>
