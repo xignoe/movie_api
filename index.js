@@ -57,7 +57,7 @@ let topMovies = [
     {
         title: 'Captain America: The Winter Soldier',
         description: 'A political party wants to create a secure and safe future but is stopped by a 70 year old Boy Scout who cant kiss correctly.',
-        genre: 'action',
+        genre: 'romance',
         director: 'Anthony and Joe Russo',
     },
     {
@@ -105,7 +105,7 @@ let topMovies = [
     {
         title: 'Thor: Ragnarok',
         description: 'A woman tries to find her place in her family after years of distance between them.',
-        genre: 'action',
+        genre: 'comedy',
         director: 'Taika Waititi',
     },
     {
